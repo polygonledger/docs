@@ -1,8 +1,14 @@
 # Protocol examples
 
-## universal login
+draft, work in progress
 
-draft
+## DNS update and ipfs
+
+Update DNS record and hook up to IPFS
+
+{:REQ DNS_UPDATE...}
+
+## universal login
 
 A user goes to a website. He does not have any account with the website.
 
@@ -12,4 +18,4 @@ The user can key-exchange with the server without prior engagement.
 
 {:REP NEWUSER_CHALLENGE :challenge abc}
 
-{:REPQ NEWUSER_CHALLENGE_RESPONSE :signature def}
+{:REQ NEWUSER_CHALLENGE_RESPONSE :signature def}
