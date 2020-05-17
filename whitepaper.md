@@ -19,3 +19,9 @@ This means we can contruct the system through iterations of complexity. The firs
 ## protocols and messaging
 
 Nodes communicate on top of TCP. TCP is a stream orientated protocol. Any application needs to therefore define when and how endpoints consider a stream a succient bit of information i.e. a message. 
+
+"Netio" is the layer for a messaging stack. It is a set of channels and messages routing through these channels. Any interaction between nodes will be encoded in these messages which follow special patterns. This allows to encode any network specific paramters, such as timeouts, liveness, priorities, routing pattterns
+
+## identity of delegates
+
+traditonally cryptonetworks use IP addresses for anonymity. We assume that delegates are public entities that at least can create a domain in their region. there using DNS has advantages. any node can use subdomain polygon.examplenode.us which points to IP of the node. if IP address changes, need to change the pointer in DNS. the top level domain has to be a [Country code top-level domain](https://en.wikipedia.org/wiki/Country_code_top-level_domain).
