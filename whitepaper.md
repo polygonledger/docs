@@ -20,6 +20,11 @@ A global transaction system (GTXS) is one where users can exchange value and per
 
 The Internet protocols are defined in standards, among them Request for Comments (RFC’s). The most important ones are RFC 793 - Transmission Control Protocol, RFC 2616 - Hypertext Transfer Protocol, RFC 1035 - Domain names, RFC 5321 - Simple Mail Transfer Protocol. The information flowing between the nodes are communication data which then get interpreted. 
 
+## Transaction Protocols
+
+The fundamental basis of blockchain is that global transaction systems can be built on top of communication systems. Polygon approaches therefore the 
+problem on the communications layer first. Communications are distinct messages.
+
 # Architecture
 
 ## State and accounts
@@ -46,9 +51,14 @@ Nodes communicate on top of TCP. TCP is a stream orientated protocol. Any applic
 
 traditonally cryptonetworks use IP addresses for anonymity. We assume that delegates are public entities that at least can create a domain in their region. there using DNS has advantages. any node can use subdomain polygon.examplenode.us which points to IP of the node. if IP address changes, need to change the pointer in DNS. the top level domain has to be a [Country code top-level domain](https://en.wikipedia.org/wiki/Country_code_top-level_domain).
 
+## Immutable data structures
+
+Clojure is an example of a language that has immutable data structures by default. Changes are denoted separately and 
+can be coordinated. This is especially useful in the context of distributed systems.
+
 # Economic model
 
-## Immutablility
+## Governance and changes
 
 The economic model should be abstract such that all stakeholders, community members, developers can share a high level understanding. It can be assumed that the economic model has two major components: rules that are immutable
 (like Bitcoin's money supply) and rules that are subject to change. Since the current work is mostly on the 
@@ -57,3 +67,11 @@ implementation level we focus on principles and values rather the rules. If the 
 ## Resarch
 
 Proposal for Proof-of-Asset, rough outline [Proof-of-asset](http://enet.io/blockchain/2019/05/25/poa.html)
+
+## References
+
+https://en.wikipedia.org/wiki/Actor_model
+https://en.wikipedia.org/wiki/Communicating_sequential_processes
+https://clojure.org/about/state
+https://arxiv.org/pdf/1508.05545.pdf Decoupling conflicts for configurable resolution in an open replication system
+https://interledger.org/interledger.pdf
