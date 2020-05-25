@@ -47,6 +47,10 @@ Nodes communicate on top of TCP. TCP is a stream orientated protocol. Any applic
 
 "Netio" is the layer for a messaging stack. It is a set of channels and messages routing through these channels. Any interaction between nodes will be encoded in these messages which follow special patterns. This allows to encode any network specific paramters, such as timeouts, liveness, priorities, routing pattterns
 
+In essence netio allows to simulate networks and map network connections to programs. This can be seen as a generalisation of the smart contract primitive
+see implementation example
+https://github.com/polygonledger/node/blob/master/ntwk_test.go#L302
+
 ## Dapps versus Webapps
 
 technical implementation of generalised dapps
