@@ -1,6 +1,6 @@
 # Whitepaper
 
-(draft)
+(draft). Please note currently most of the effort is on the code, so this only touches briefly on the high level
 
 # Introduction
 
@@ -41,11 +41,16 @@ account => transactionTypeComplex => account
 
 This means we can contruct the system through iterations of complexity. The first iteration has only simple transaction types i.e. sending and receiving electronic cash.
 
-## Protocols and messaging
+## Netio layer - Protocols and messaging
 
 Nodes communicate on top of TCP. TCP is a stream orientated protocol. Any application needs to therefore define when and how endpoints consider a stream a succient bit of information i.e. a message. 
 
 "Netio" is the layer for a messaging stack. It is a set of channels and messages routing through these channels. Any interaction between nodes will be encoded in these messages which follow special patterns. This allows to encode any network specific paramters, such as timeouts, liveness, priorities, routing pattterns
+
+## Dapps versus Webapps
+
+technical implementation of generalised dapps
+https://github.com/polygonledger/node/blob/master/handlers_app.go
 
 ## Identity of delegates
 
@@ -70,8 +75,8 @@ Proposal for Proof-of-Asset, rough outline [Proof-of-asset](http://enet.io/block
 
 ## References
 
-https://en.wikipedia.org/wiki/Actor_model
-https://en.wikipedia.org/wiki/Communicating_sequential_processes
-https://clojure.org/about/state
-https://arxiv.org/pdf/1508.05545.pdf Decoupling conflicts for configurable resolution in an open replication system
-https://interledger.org/interledger.pdf
+* https://en.wikipedia.org/wiki/Actor_model
+* https://en.wikipedia.org/wiki/Communicating_sequential_processes
+* https://clojure.org/about/state
+* https://arxiv.org/pdf/1508.05545.pdf Decoupling conflicts for configurable resolution in an open * replication system
+* https://interledger.org/interledger.pdf
