@@ -29,7 +29,7 @@ problem on the communications layer first. Communications are distinct messages.
 
 ## State and accounts
 
-Polygon is based on an accounts based ledger.
+Polygon is an accounts based ledger.
 
 The movement of value is formally defined by transactions. Traditionally extensbility of blockchains were designed through programmable transactions starting with Bitcoin. The sender and receiver of Bitcoins are public keys and the script language defines the possible transactions between these endpoints. The transactions are type-less in that the code is defined in byte code expressions. Ethereum contracts can be much more complex, but similarly are byte code. In the case of Ethereum there are two distinct transactions: Ether and contracts. What a contract does can not be seen unless one understands the higher level code which was compiled into the byte code. 
 
